@@ -1,0 +1,134 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  background:#f5f7fa;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  background:#198754;
+  color:#fff;
+}
+
+header nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:#fff;
+  font-weight:500;
+}
+
+.logo{
+  font-size:20px;
+  font-weight:600;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:80px 20px;
+  background:linear-gradient(135deg,#198754,#20c997);
+  color:#fff;
+}
+
+.hero h1{
+  font-size:36px;
+}
+
+.hero p{
+  margin:10px 0 30px;
+}
+
+.busca{
+  display:flex;
+  justify-content:center;
+}
+
+.busca input{
+  padding:12px;
+  width:250px;
+  border:none;
+  border-radius:5px 0 0 5px;
+}
+
+.busca button{
+  padding:12px 20px;
+  border:none;
+  background:#fff;
+  color:#198754;
+  font-weight:bold;
+  border-radius:0 5px 5px 0;
+  cursor:pointer;
+}
+
+/* CATEGORIAS */
+.categorias{
+  padding:50px 20px;
+  text-align:center;
+}
+
+.categorias h2{
+  margin-bottom:20px;
+}
+
+.grid{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.card{
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  width:150px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:scale(1.05);
+}
+
+/* PROFISSIONAIS */
+.profissionais{
+  padding:50px 20px;
+  text-align:center;
+}
+
+.perfil{
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  width:200px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.perfil button{
+  margin-top:10px;
+  padding:8px 15px;
+  border:none;
+  background:#198754;
+  color:#fff;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#198754;
+  color:#fff;
+  margin-top:40px;
+}
