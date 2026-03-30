@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Busca - ConectaServiços</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="logo">ConectaServiços</div>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="#">Profissionais</a>
+        <a href="#">Mensagens</a>
+        <div class="user-profile">👤 Olá, Usuário</div>
+    </nav>
+</header>
+
+<main class="busca-container">
+    <!-- BARRA LATERAL DE FILTROS -->
+    <aside class="filtros">
+        <h3>Filtrar por:</h3>
+        <form>
+            <div class="filtro-grupo">
+                <label>Distância (km)</label>
+                <input type="range" min="1" max="50" value="10">
+            </div>
+
+            <div class="filtro-grupo">
+                <label>Avaliação</label>
+                <select>
+                    <option>Todas</option>
+                    <option>4.5+ estrelas</option>
+                    <option>4.0+ estrelas</option>
+                </select>
+            </div>
+
+            <div class="filtro-grupo">
+                <label>Faixa de Preço</label>
+                <input type="number" placeholder="Mín">
+                <input type="number" placeholder="Máx">
+            </div>
+
+            <button type="button" class="btn-filtrar">Aplicar Filtros</button>
+        </form>
+    </aside>
+
+    <!-- LISTA DE RESULTADOS -->
+    <section class="resultados">
+        <h2>Resultados para "Eletricista" em São Paulo</h2>
+        
+        <!-- Card de Exemplo 1 -->
+        <div class="card-resultado">
+            <div class="foto-perfil"></div>
+            <div class="info-resultado">
+                <div class="header-card">
+                    <h3>Ricardo Oliveira</h3>
+                    <span class="nota">⭐ 4.9 (124 avaliações)</span>
+                </div>
+                <p class="especialidade">Eletricista Residencial e Industrial</p>
+                <p class="localizacao">📍 A 2km de você - Pinheiros</p>
+                <p class="descricao">Especialista em quadros de energia, curto-circuito e instalações de LED. Atendimento 24h.</p>
+                <div class="tags">
+                    <span>Instalações</span>
+                    <span>Reparos</span>
+                    <span>Emergência</span>
+                </div>
+            </div>
+            <div class="acao-resultado">
+                <p class="preco-medio">A partir de <strong>R$ 150</strong></p>
+                <button class="btn-perfil">Ver Detalhes</button>
+            </div>
+        </div>
+
+        <!-- Card de Exemplo 2 -->
+        <div class="card-resultado">
+            <div class="foto-perfil"></div>
+            <div class="info-resultado">
+                <div class="header-card">
+                    <h3>Ana Beatriz</h3>
+                    <span class="nota">⭐ 4.7 (89 avaliações)</span>
+                </div>
+                <p class="especialidade">Eletricista e Pequenos Reparos</p>
+                <p class="localizacao">📍 A 5km de você - Vila Mariana</p>
+                <p class="descricao">Manutenção preventiva e troca de fiação antiga com foco em economia de energia.</p>
+                <div class="tags">
+                    <span>Manutenção</span>
+                    <span>Certificado</span>
+                </div>
+            </div>
+            <div class="acao-resultado">
+                <p class="preco-medio">A partir de <strong>R$ 120</strong></p>
+                <button class="btn-perfil">Ver Detalhes</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>
