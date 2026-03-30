@@ -1,19 +1,399 @@
-header{
-  background: 	#B8860B;
-  color: white;
-  padding: 20px 0;
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.logo{
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #007bff;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    margin-left: 20px;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.busca {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.busca input {
+    padding: 12px 20px;
+    width: 350px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.busca button {
+    padding: 12px 25px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.busca button:hover {
+    background-color: #218838;
+}
+
+/* Categorias e Profissionais */
+section {
+    padding: 60px 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Cards de Categoria */
+.card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    color: #007bff;
+}
+
+/* Cards de Perfil */
+.perfil {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.perfil h3 {
+    margin-bottom: 5px;
+}
+
+.perfil p {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.perfil button {
+    background-color: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.perfil button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .busca {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .busca input {
+        width: 100%;
+    }
+
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+}
+/* --- Estilos da Página de Login --- */
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 150px); /* Centraliza verticalmente descontando o header/footer */
+    padding: 40px 20px;
+}
+
+.login .container {
+    background: #ffffff;
+    max-width: 400px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.login h2 {
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: 600;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.login input {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.login input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0,123,255,0.1);
+}
+
+.login button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.login button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.login p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.login p a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login p a:hover {
+    text-decoration: underline;
+}
+
+/* Ajuste no link do Header para o Login */
+header .container a {
+    text-decoration: none;
+    color: #007bff;
     font-weight: 600;
     font-size: 1.5rem;
-    color: #f1c40f;     
 }
-nave a{
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-  font-weight: 400;
+/* --- Estilos da Página de Cadastro --- */
+
+.form-section {
+    background: #ffffff;
+    max-width: 600px; /* Um pouco mais largo que o login para caber os campos */
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
-.hero{
-  background-color: #FFDEAD;
+
+.form-section h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+    font-size: 2rem;
 }
+
+/* Estilização dos Grupos (Fieldset) */
+fieldset {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+legend {
+    font-weight: 600;
+    padding: 0 10px;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* Labels e Campos */
+.form-section label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #444;
+}
+
+.form-section input, 
+.form-section select, 
+.form-section textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #fafafa;
+    transition: all 0.3s;
+}
+
+/* Efeito ao clicar nos campos */
+.form-section input:focus, 
+.form-section select:focus, 
+.form-section textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+}
+
+/* Ajuste específico para o Textarea */
+textarea {
+    resize: vertical; /* Permite aumentar apenas a altura */
+    min-height: 100px;
+}
+
+/* Botão de Cadastro */
+.form-section button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745; /* Verde para diferenciar do login */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 10px;
+}
+
+.form-section button[type="submit"]:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.form-section button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* Responsividade para Telas Pequenas */
+@media (max-width: 480px) {
+    .form-section {
+        padding: 20px;
+        margin: 20px 10px;
+    }
+    
+    fieldset {
+        padding: 15px;
+    }
+  }
