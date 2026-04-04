@@ -396,4 +396,63 @@ textarea {
     fieldset {
         padding: 15px;
     }
-  }
+}
+/* TÍTULO DA PÁGINA */
+.profissionais h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* GRID DE PROFISSIONAIS */
+.profissionais .grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+/* CARD DO PROFISSIONAL */
+.perfil {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 250px;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+/* HOVER (efeito bonito) */
+.perfil:hover {
+  transform: translateY(-5px);
+}
+
+/* NOME */
+.perfil h2 {
+  margin-bottom: 10px;
+  color: #198754;
+}
+
+/* TEXTO */
+.perfil p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* BOTÃO */
+.perfil button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+
+  border: none;
+  border-radius: 8px;
+  background: #198754;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.perfil button:hover {
+  background: #157347;
+}
